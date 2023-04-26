@@ -1,0 +1,55 @@
+
+// Q.3 Do the below programs in arrow functions.
+
+// a)Print odd numbers in an array:
+
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const oddNumbers = arr1.filter(num => num % 2 !== 0);
+console.log(oddNumbers);
+ 
+
+// b) Convert all the strings to title caps in a string array:
+
+
+const arr2 = ["vivek bharkad", "vaibhav dhanure", "vaibhav math"];
+const titleCaps = arr.map(str => {
+  const words = str.split(" ");
+  const capitalizedWords = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  return capitalizedWords.join(" ");
+});
+console.log(titleCaps);
+
+
+// c) Sum of all numbers in an array:
+
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((total, num) => total + num);
+console.log(sum);
+
+
+// d) Return all the prime numbers in an array:
+
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const isPrime = num => {
+  if(num <= 1) return false;
+  for(let i = 2; i <= Math.sqrt(num); i++)
+    if(num % i === 0) return false;
+  return true;
+}
+const primeNumbers1 = numbers1.filter(isPrime);
+console.log(primeNumbers1);
+
+
+// e)Return all the palindromes in an array;
+ 
+const words = ['level', 'noon', 'hello', 'racecar', 'world'];
+const isPalindrome = str => {
+  const reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
+}
+const palindromeWords = words.filter(isPalindrome);
+console.log(palindromeWords);
+
